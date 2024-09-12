@@ -1,0 +1,6 @@
+/backend/.venv
+/backend/server_test.py
+/frontend/node_modules
+/frontend/dist
+/figma
+/database

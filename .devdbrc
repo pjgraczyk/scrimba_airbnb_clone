@@ -1,0 +1,6 @@
+[
+  {
+    "type": "sqlite",
+    "path": "d:\\projects\\scrimba_airbnb_clone\\database\\database.db"
+  }
+]

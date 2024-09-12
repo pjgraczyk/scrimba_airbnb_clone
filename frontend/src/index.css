@@ -1,0 +1,121 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@layer components {
+  .app {
+    @apply min-h-screen transition-colors duration-300 w-full;
+  }
+
+  .app.light {
+    @apply bg-gray-100 text-gray-900;
+  }
+
+  .app.dark {
+    @apply bg-gray-900 text-gray-100;
+  }
+
+  .navbar {
+    @apply flex justify-between items-center py-4 px-6;
+  }
+
+  .navbar.light {
+    @apply bg-white text-gray-800 shadow-md;
+  }
+
+  .navbar.dark {
+    @apply bg-gray-800 text-white shadow-gray-700;
+  }
+
+  .navbar-brand {
+    @apply flex-shrink-0 font-bold;
+  }
+
+  .navbar-menu {
+    @apply flex-grow flex justify-center items-center font-semibold;
+  }
+
+  .navbar-menu a {
+    @apply flex-grow flex justify-center items-center hover:text-blue-500 transition-colors duration-200 mx-10;
+  }
+
+  .theme-toggle-button {
+    @apply px-4 py-2 rounded-md transition-colors duration-200;
+  }
+
+  .theme-toggle-button.light {
+    @apply bg-gray-200 text-gray-800 hover:bg-gray-300;
+  }
+
+  .theme-toggle-button.dark {
+    @apply bg-gray-700 text-white hover:bg-gray-600;
+  }
+  .footer {
+    @apply max-w-screen-xl mx-auto flex flex-col sm:flex-row justify-center items-center px-4 py-6;
+  }
+  
+  .footer > * {
+    @apply text-center sm:text-left;
+  }
+
+  .footer-icon {
+    @apply inline mx-10;
+  }
+  .logo {
+    @apply h-24 p-6 transition-filter duration-300;
+    will-change: filter;
+  }
+
+  .logo:hover {
+    filter: drop-shadow(0 0 2em #646cffaa);
+  }
+
+  .logo.react:hover {
+    filter: drop-shadow(0 0 2em #61dafbaa);
+  }
+
+  .app-layout {
+    @apply mt-auto;
+  }
+
+  .app-maincontent {
+    @apply flex place-content-center m-auto p-10;
+    ;
+  }
+
+  .card {
+    @apply p-8;
+  }
+
+  .read-the-docs {
+    @apply text-gray-500;
+  }
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
